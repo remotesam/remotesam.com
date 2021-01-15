@@ -13139,7 +13139,7 @@ button:focus {
 /* Navbar Brand */
 .navbar-brand,
 .navbar-brand > img {
-  width: 7.5rem;
+  width: 12rem; //goody
 }
 
 /* Navbar Toggler */
@@ -14701,7 +14701,7 @@ button:focus {
   }
   .navbar-expand-lg .navbar-brand,
   .navbar-expand-lg .navbar-brand > img {
-    width: 7rem;
+    width: 10rem;
   }
   .navbar-expand-lg .navbar-nav {
     margin-top: 1rem;
