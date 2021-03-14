@@ -38,7 +38,7 @@
         <nav class="js-mega-menu navbar navbar-expand-lg">
           <!-- Logo -->
           <a class="navbar-brand" href="../../html/index.html" aria-label="SamTech">
-            <img src="./assets/svg/logos/remote-sam-logo.png" alt="Logo">
+            <img src="./assets/svg/logos/remote-sam-logo-2.png" alt="Logo">
           </a>
           <!-- End Logo -->
 
@@ -134,7 +134,7 @@
               <use xlink:href="#mainHeroSVG1"/>
             </clipPath>
             <g transform="matrix(1 0 0 1 0 0)" clip-path="url(#mainHeroSVG2)">
-              <image width="750" height="750" xlink:href="./assets/img/750x750/img2.jpg" transform="matrix(1.4462 0 0 1.4448 52.8755 0)"></image>
+              <image id="heroes" width="750" height="750" xlink:href="./assets/img/750x750/img4.jpg" transform="matrix(1.4462 0 0 1.4448 52.8755 0)"></image>
             </g>
           </svg>
         </figure>
@@ -150,7 +150,7 @@
         <!-- Title -->
         <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
           <span class="d-block small font-weight-bold text-cap mb-2">What we do?</span>
-          <h2>Remote Sam helps you quickly hire remote talent for your business needs</h2>
+          <h2>Remote Sam helps you quickly hire remote software talent for your business needs</h2>
         </div>
         <!-- End Title -->
         <div class="w-lg-85 mx-lg-auto">
@@ -167,9 +167,9 @@
                           <div class="media font-size-1 text-body mb-2">
                             <i class="fas fa-check-circle text-success mt-1 mr-2"></i>
                             <div class="media-body">
-                              Mobile app developer
+                              Backend engineer
                             </div>
-                          </div>
+                          </div>                          
                           <div class="media font-size-1 text-body mb-2">
                             <i class="fas fa-check-circle text-success mt-1 mr-2"></i>
                             <div class="media-body">
@@ -179,7 +179,7 @@
                           <div class="media font-size-1 text-body mb-2">
                             <i class="fas fa-check-circle text-success mt-1 mr-2"></i>
                             <div class="media-body">
-                              Backend engineer
+                              Mobile app developer
                             </div>
                           </div>
                           <div class="media font-size-1 text-body mb-2">
@@ -187,10 +187,27 @@
                             <div class="media-body">
                               Full-stack engineer
                             </div>
+                          </div><div class="media font-size-1 text-body mb-2">
+                            <i class="fas fa-check-circle text-success mt-1 mr-2"></i>
+                            <div class="media-body">
+                              IT engineer
+                            </div>
                           </div>
                         </div>
 
                         <div class="col-sm-6">
+                          <div class="media font-size-1 text-body mb-2">
+                            <i class="fas fa-check-circle text-success mt-1 mr-2"></i>
+                            <div class="media-body">
+                              Maintainence Developer
+                            </div>
+                          </div>
+                          <div class="media font-size-1 text-body mb-2">
+                            <i class="fas fa-check-circle text-success mt-1 mr-2"></i>
+                            <div class="media-body">
+                              Test engineer
+                            </div>
+                          </div>
                           <div class="media font-size-1 text-body mb-2">
                             <i class="fas fa-check-circle text-success mt-1 mr-2"></i>
                             <div class="media-body">
@@ -200,19 +217,15 @@
                           <div class="media font-size-1 text-body mb-2">
                             <i class="fas fa-check-circle text-success mt-1 mr-2"></i>
                             <div class="media-body">
-                              QA test engineer
+                              Product strategy 
+                              <!-- <span class="badge badge-soft-secondary badge-pill ml-1">Consultation-only</span> -->
                             </div>
                           </div>
                           <div class="media font-size-1 text-body mb-2">
                             <i class="fas fa-check-circle text-success mt-1 mr-2"></i>
                             <div class="media-body">
-                              Product manager <span class="badge badge-soft-secondary badge-pill ml-1">Consultation-only</span>
-                            </div>
-                          </div>
-                          <div class="media font-size-1 text-body mb-2">
-                            <i class="fas fa-check-circle text-success mt-1 mr-2"></i>
-                            <div class="media-body">
-                              Product operations <span class="badge badge-soft-secondary badge-pill ml-1">Consultation-only</span>
+                              Product operations 
+                              <!-- <span class="badge badge-soft-secondary badge-pill ml-1">Consultation-only</span> -->
                             </div>
                           </div>
                         </div>
@@ -975,7 +988,18 @@
       });
     });
   </script>
-
+  <script>
+      var counter = 4; //instantiate a counter
+      var maxImage = 5; //the total number of images that are available
+      setInterval(function() {
+          document.getElementById('heroes').setAttribute("xlink:href", "./assets/img/750x750/img"+(counter+1)+".jpg");
+          if (counter + 1 == maxImage) {
+              counter = 0; //reset to start
+          } else {
+              ++counter; //iterate to next image
+          }
+      }, 5000);
+  </script>
   <!-- IE Support -->
   <script>
     if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="./assets/vendor/babel-polyfill/dist/polyfill.js"><\/script>');
